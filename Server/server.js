@@ -44,4 +44,3 @@ connectDb().then(() =>{
     });
 });
 
-//this is i check only
