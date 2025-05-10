@@ -1,0 +1,103 @@
+.admin-contacts-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-contacts h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .admin-contacts table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+  }
+  
+  .admin-contacts th,
+  .admin-contacts td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .admin-contacts th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .admin-contacts td {
+    background-color: #fdfdfd;
+  }
+  
+  .delete-btn {
+    padding: 0.5rem 1rem;
+    background-color: #e93446;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .admin-contacts table,
+    .admin-contacts thead,
+    .admin-contacts tbody,
+    .admin-contacts th,
+    .admin-contacts td,
+    .admin-contacts tr {
+      display: block;
+      width: 100%;
+    }
+  
+    .admin-contacts thead {
+      display: none;
+    }
+  
+    .admin-contacts tr {
+      margin-bottom: 1.5rem;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+  
+    .admin-contacts td {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-bottom: 1px solid #eee;
+      font-size: 0.95rem;
+    }
+  
+    .admin-contacts td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      flex-basis: 40%;
+      color: #555;
+    }
+  
+    .delete-btn {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+  

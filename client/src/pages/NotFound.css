@@ -1,0 +1,108 @@
+/* Base Styles */
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 404 Number Animation */
+.notfound-container h1 {
+  font-size: 8rem;
+  margin-bottom: 1rem;
+  color: #0a66c2;
+  animation: bounce 1.2s ease-in-out;
+}
+
+/* Message Animation */
+.message {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease-in-out 0.5s forwards;
+}
+
+/* Buttons Animation */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp 0.8s ease-in-out 0.8s forwards;
+}
+
+.btn {
+  background-color: #0a66c2;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #084b98;
+  transform: scale(1.05);
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #0a66c2;
+  color: #0a66c2;
+}
+
+.btn.outline:hover {
+  background-color: #0a66c2;
+  color: #0a66c2;
+}
+
+/* Contact Info Animation */
+.contact-info {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeUp 0.8s ease-in-out 1.2s forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

@@ -1,0 +1,134 @@
+/* Contact Section */
+.section-contact {
+    padding: 4rem 1rem;
+    background-color: transparent;
+  }
+  
+  .contact-content .main-heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color, #222);
+  }
+  
+  /* Grid Layout */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 3rem;
+  }
+  
+  .grid-two-cols {
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    align-items: center;
+  }
+  
+  /* Image */
+  .contact-img img {
+    width: 100%;
+    height: auto;
+    max-width: 380px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Form Styling */
+  .section-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-form label {
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 0.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  .section-form input,
+  .section-form textarea {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    background-color: #fefefe;
+  }
+  
+  .section-form textarea {
+    resize: vertical;
+  }
+  
+  .section-form button {
+    align-self: flex-start;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.4rem;
+    background-color: var(--btn-color, #0a66c2);
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .section-form button:hover {
+    background-color: #084b98;
+  }
+  .section-form label,
+.section-form input::placeholder,
+.section-form textarea::placeholder {
+  text-transform: capitalize;
+}
+  
+  /* Map Section */
+  .mb-3 {
+    margin-top: 4rem;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .contact-content .main-heading {
+      font-size: 2.6rem;
+    }
+  
+    .section-form {
+      padding: 1.6rem;
+    }
+  
+    .section-form input,
+    .section-form textarea,
+    .section-form button {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: 55%;
+    }
+  
+    .section-contact {
+      padding: 3rem 1rem;
+    }
+  
+    .contact-img img {
+      max-width: 100%;
+    }
+  
+    .mb-3 iframe {
+      height: 280px;
+    }
+  }
+  

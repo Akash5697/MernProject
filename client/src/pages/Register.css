@@ -1,0 +1,166 @@
+/* Base Styles */
+.section-registration {
+  padding: 5rem 2rem;
+  background-color: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: 4rem;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: center;
+}
+
+
+
+.registration-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.registration-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  display: block;
+}
+
+
+.registration-form {
+  background-color: #fff;
+  padding: 4rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.registration-form h1 {
+  color: var(--dark-color, #222);
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.registration-form form > div {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.registration-form label {
+  flex: 0 0 30%;
+  color: var(--dark-color, #222);
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+.registration-form input {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--helper-color, #ccc);
+  border-radius: 0.6rem;
+  background-color: #fefefe;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.registration-form input:focus {
+  border-color: var(--btn-color, #0a66c2);
+}
+
+.btn {
+  background-color: var(--btn-color, #0a66c2);
+  color: white;
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #084b98;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr; /* Stack image and form vertically */
+  }
+
+  .registration-form {
+    padding: 4rem 2rem;
+    max-width: 100%;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1); /* Keep shadow */
+    background-color: #fff; /* Maintain original background */
+    border-radius: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .registration-form {
+    padding: 2rem 1.5rem;
+    max-width: 400px; /* Limit width to reduce size */
+    width: 100%;
+  }
+
+  .registration-form form > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .registration-form label {
+    flex: none;
+    font-size: 1.4rem;
+  }
+
+  .registration-form input {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .registration-image {
+    justify-content: center;
+  }
+
+  .registration-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+}

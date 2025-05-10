@@ -1,0 +1,43 @@
+.access-denied-container {
+    max-width: 600px;
+    margin: 5rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff3f3;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+  }
+  
+  .access-denied-title {
+    color: #d9534f;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .access-denied-message {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .access-note-section,
+  .access-steps-section {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .credentials-box {
+    background-color: #f7f7f7;
+    border: 1px dashed #333;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 400px;
+    border-radius: 8px;
+  }
+  
+  .admin-note {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #d9534f;
+  }
+  

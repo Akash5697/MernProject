@@ -1,0 +1,210 @@
+/* Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container1 {
+  max-width: 1200px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+ background-color: var(--bg-color);
+}
+
+.logo-brand a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+
+ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.6rem;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: #007bff;
+}
+
+/* Hamburger Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-brand {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: block;
+    background-color: rgb(204, 206, 212);
+    /* Do not add background-color here */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.hide {
+    display: none;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links ul li a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: #333; /* Text color */
+    background-color: rgb(204, 206, 212); /* Menu item background color */
+  }
+
+  .nav-links ul li a:hover {
+    color: #007bff; /* Change text color on hover */
+    background-color: #f5f0f0; /* Light grey background on hover */
+  }
+  
+  
+}
+
+/* MEDIA QUERY: For screens smaller than 500px */
+@media (max-width: 500px) {
+  /* General layout for Registration */
+  .section-registration {
+    padding: 5rem 2rem;
+    background-color: var(--bg-color);
+  }
+
+  .grid-two-cols {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+    display: grid; /* Make it a grid to stack the items */
+  }
+
+  .registration-image {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .registration-image img {
+    width: 80%; /* Adjust photo size to fit smaller screens */
+    max-width: 300px;
+  }
+
+  .registration-form {
+    width: 100%;
+    max-width: 400px; /* Set max-width for the form */
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  .registration-form input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  .registration-form label {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .registration-form h1 {
+    font-size: 2rem; /* Make title smaller */
+    text-align: center;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .btn:hover {
+    background-color: #4e56e4;
+  }
+
+  /* Ensure the registration form and image stack one below the other */
+  .container {
+    flex-direction: column; /* Stack the image and form vertically */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .registration-image,
+  .registration-form {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
