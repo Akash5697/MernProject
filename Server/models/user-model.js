@@ -29,14 +29,14 @@ userSchema.pre("save", async function (next){
     const user = this
 
     if(!user.isModified("password")){
-        next();
+       return next();
     }
 
     try{
         const saltRound = await bcrypt.genSalt(10);
         const hash_password = await bcrypt.hash(user.password,saltRound);
         user.password = hash_password;
-
+        next();
 
     }catch(err){
         next(err)
@@ -60,7 +60,8 @@ process.env.JWT_SECRET_KEY,{
 }
 );
 }catch(error){
-    console.log(error)
+    console.log("JWT generation error:",error);
+    return null;
 }
 };
 
