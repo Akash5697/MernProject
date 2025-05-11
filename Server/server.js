@@ -11,7 +11,7 @@ const errorMiddleware = require('./middlewares/error-middleware');
 
 
 const corsOptions = {
-    origin: "https://mernproject-1-r9h1.onrender.com",
+    origin: "https://codecraft-akash.onrender.com",
     methods:"GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials:true,
 };
